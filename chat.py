@@ -1,14 +1,11 @@
 import streamlit as st
 
-from dotenv import load_dotenv
 from llm import get_ai_response
 
 st.set_page_config(page_title="세금 챗봇", page_icon="🤖")
 
 st.title("🤖 세금 챗봇")
 st.caption("세금에 관련된 모든 것을 답해드립니다 (Upstage)")
-
-load_dotenv()
 
 if 'message_list' not in st.session_state:
     st.session_state.message_list = []
